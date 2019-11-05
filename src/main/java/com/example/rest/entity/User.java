@@ -23,6 +23,8 @@ public class User {
 	private String userId;
 	
 	/**
+	 * 
+	 * 
 	 * This method will get Table ID 
 	 * @return
 	 */
@@ -38,7 +40,7 @@ public class User {
 		this.userTableId = userTableId;
 	}
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user",  cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user",  cascade = CascadeType.MERGE)
 	private List<ProductCatalog> productCatalogList;
 	
 	
