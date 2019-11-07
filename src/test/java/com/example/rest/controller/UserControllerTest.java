@@ -68,7 +68,8 @@ public class UserControllerTest {
 	@Test
 	public void testAddProductInCatalog() throws Exception {
 
-		RequestBuilder builder = MockMvcRequestBuilders.post("/addProductInCatalog")
+		String addPrductURL = "/addProductInCatalog";
+		RequestBuilder builder = MockMvcRequestBuilders.post(addPrductURL)
 				.contentType(MediaType.APPLICATION_JSON).content(asObjectToJsonString(productCatalog))
 				.characterEncoding("utf-8").accept(MediaType.APPLICATION_JSON);
 
