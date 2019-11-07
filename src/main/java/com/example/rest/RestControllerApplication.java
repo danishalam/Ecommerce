@@ -31,7 +31,11 @@ public class RestControllerApplication {
 		SpringApplication.run(RestControllerApplication.class, args);
 	}
 	
-	 @Bean
+	 /**
+	  * This method 
+	 * @return
+	 */
+	@Bean
 	    public Docket api() {
 	        return new Docket(DocumentationType.SWAGGER_2).select()
 	            .apis(RequestHandlerSelectors

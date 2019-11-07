@@ -40,6 +40,7 @@ public class UserServiceImpl implements UserService {
 			newProductCatalog = new ProductCatalog(pCatalog.getProductId(), pCatalog.getProductName(),
 					pCatalog.getPrice(), pCatalog.getProductDescription(), pCatalog.getProductAvailability(),
 					pCatalog.getUserId());
+			newProductCatalog.setUser(newUser);
 			productCatalogList.add(newProductCatalog);
 			newUser.setProductCatalogList(productCatalogList);
 			userRepository.save(newUser);
@@ -50,6 +51,7 @@ public class UserServiceImpl implements UserService {
 			newProductCatalog = new ProductCatalog(pCatalog.getProductId(), pCatalog.getProductName(),
 					pCatalog.getPrice(), pCatalog.getProductDescription(), pCatalog.getProductAvailability(),
 					pCatalog.getUserId());
+			newProductCatalog.setUser(newUser);
 			productCatalogList.add(newProductCatalog);
 			newUser.setProductCatalogList(productCatalogList);
 			userRepository.save(newUser);
